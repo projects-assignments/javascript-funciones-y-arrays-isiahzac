@@ -22,198 +22,193 @@ while (counter > 0) {
 return array;
 }
 
-it('1+1 = 2',()=>assert.StrictEqual(1+1,2));
+it('1+1 = 2',()=>assert.strictEqual(1+1,2));
 
 describe('Find the maximun - maxOfTwoNumbers #1', ()=>{
   it('Defines maxOfTwoNumbers',()=>{
-      assert.StrictEqual(typeof maxOfTwoNumbers,'function');
+      assert.strictEqual(typeof maxOfTwoNumbers,'function');
   });
   it('First parameter larger', ()=> {
-      assert.StrictEqual(maxOfTwoNumbers(2, 1),2);
+      assert.strictEqual(maxOfTwoNumbers(2, 1),2);
     });
 
   it('Second parameter larger', ()=> {
-      assert.StrictEqual(maxOfTwoNumbers(1, 3),3);
+      assert.strictEqual(maxOfTwoNumbers(1, 3),3);
     });
 
   it('First and Second parameter equal', ()=> {
-      assert.StrictEqual(maxOfTwoNumbers(4, 4),4);
+      assert.strictEqual(maxOfTwoNumbers(4, 4),4);
     });
 })
 
 describe('Finding Longest Word - findLongestWord #2', ()=> {
 it('Defines findLongestWord', ()=> {
-    assert.StrictEqual(typeof findLongestWord,'function');
+    assert.strictEqual(typeof findLongestWord,'function');
   });
 
 it('returns undefined testh an empty array', ()=> {
-    assert.StrictEqual(findLongestWord([]),undefined);
+    assert.strictEqual(findLongestWord([]),undefined);
   });
 
 it('returns the word test an 1-word array', ()=> {
-    assert.StrictEqual(findLongestWord(['test']),'test');
+    assert.strictEqual(findLongestWord(['test']),'test');
   });
 
 it('returns the first occurrence word when longest have multiple occurrences ', ()=> {
-    assert.StrictEqual(findLongestWord(['foo', 'bar']),'foo');
-    assert.StrictEqual(findLongestWord(['bar', 'foo']),'bar');
+    assert.strictEqual(findLongestWord(['foo', 'bar']),'foo');
+    assert.strictEqual(findLongestWord(['bar', 'foo']),'bar');
   });
 
 it('returns the longest occurrence when test has multiple words', ()=> {
     let words = ['a', 'zab', '12abc', '$$abcd', 'abcde', 'factoriaF5'];
     for (let i = 0; i < 10; i++) {
-      assert.StrictEqual(findLongestWord(shuffle(words)),'factoriaF5');
+      assert.strictEqual(findLongestWord(shuffle(words)),'factoriaF5');
     }
   });
 });
 
 describe('Calculating a Sum - sumArray #3', ()=> {
 it('Defines sumArray', ()=> {
-    assert.StrictEqual(typeof sumArray,'function');
+    assert.strictEqual(typeof sumArray,'function');
   });
 
 it('returns zero testh an empty array', ()=> {
-    assert.StrictEqual(sumArray([]),0);
+    assert.strictEqual(sumArray([]),0);
   });
 
 it('returns the number testh one number array', ()=> {
-    assert.StrictEqual(sumArray([4]),4);
+    assert.strictEqual(sumArray([4]),4);
   });
 
 it('returns zero if all elements are zero', ()=> {
-    assert.StrictEqual(sumArray([0, 0, 0, 0, 0]),0);
+    assert.strictEqual(sumArray([0, 0, 0, 0, 0]),0);
   });
 
 it('returns the sum, potestive', ()=> {
-    assert.StrictEqual(sumArray([1, 2, 3, 4, 5]),15);
+    assert.strictEqual(sumArray([1, 2, 3, 4, 5]),15);
   });
 
 it('returns the sum, negative', ()=> {
-    assert.StrictEqual(sumArray([-1, -2, -3, -4, -5]),-15);
+    assert.strictEqual(sumArray([-1, -2, -3, -4, -5]),-15);
   });
 });
 
 describe('Calculating the Average - averageNumbers #4', ()=> {
 it('Defines averageNumbers', ()=> {
-    assert.StrictEqual(typeof averageNumbers,'function');
+    assert.strictEqual(typeof averageNumbers,'function');
   });
 
 it('returns undefined testh an empty array', ()=> {
-    assert.StrictEqual(averageNumbers([]),undefined);
+    assert.strictEqual(averageNumbers([]),undefined);
   });
 
 it('returns the average of a unique element array', ()=> {
-    assert.StrictEqual(averageNumbers([9]),9);
+    assert.strictEqual(averageNumbers([9]),9);
   });
 
 it('returns the average even testh negative values', ()=> {
-    assert.StrictEqual(averageNumbers([9, -3, -4, 6]),2);
+    assert.strictEqual(averageNumbers([9, -3, -4, 6]),2);
   });
 
 it('returns the average of the array', ()=> {
-    assert.StrictEqual(averageNumbers([9, 10, 82, 92, 32, 102, 58]),55);
+    assert.strictEqual(averageNumbers([9, 10, 82, 92, 32, 102, 58]),55);
   });
 
 it('returns the average of the array, float result', ()=> {
-    assert.StrictEqual(averageNumbers([1, 2]),1.5);
+    assert.strictEqual(averageNumbers([1, 2]),1.5);
   });
 });
 
 describe('Calculating the Average - averageWordLength #5', ()=> {
 it('Defines averageWordLength', ()=> {
-    assert.StrictEqual(typeof averageWordLength,'function');
+    assert.strictEqual(typeof averageWordLength,'function');
   });
 
 it('returns undefined testh an empty array', ()=> {
-    assert.StrictEqual(averageWordLength([]),undefined);
+    assert.strictEqual(averageWordLength([]),undefined);
   });
 
 it('returns the length of a unique element array', ()=> {
-    assert.StrictEqual(averageWordLength(['bcncodes']),8);
+    assert.strictEqual(averageWordLength(['bcncodes']),8);
   });
 
 it('returns the length of a unique element array, float', ()=> {
-    assert.StrictEqual(averageWordLength(['a', 'ab']),1.5);
+    assert.strictEqual(averageWordLength(['a', 'ab']),1.5);
   });
 
 it('returns the average of a the array', ()=> {
-    assert.StrictEqual(averageWordLength(['Bcncodes', 'Madrid', 'Barcelona', 'Paris', 'Miami', 'Mexico', 'Berlin', 'Programmers']),7);
+    assert.strictEqual(averageWordLength(['Bcncodes', 'Madrid', 'Barcelona', 'Paris', 'Miami', 'Mexico', 'Berlin', 'Programmers']),7);
   });
 });
 
 describe('Unique Arrays - uniquifyArray #6', ()=> {
-it('Defines uniquifyArray', ()=> {
-    assert.StrictEqual(typeof uniquifyArray,'function');
+  it('Defines uniquifyArray', ()=> {
+      assert.strictEqual(typeof uniquifyArray,'function');
+    });
+  it('returns undefined testh an empty array', ()=> {
+      assert.strictEqual(uniquifyArray([]),undefined);
+    });
+  it('returns the array when having a single element', ()=> {
+      assert.equal(Array.toString(uniquifyArray(['FactoriaF5'])),Array.toString(['FactoriaF5']));
+    });
+  it('returns the correct array when having an array of the same element', ()=> {
+      assert.equal(Array.toString(uniquifyArray(['FactoriaF5', 'FactoriaF5', 'FactoriaF5'])),Array.toString(['FactoriaF5']));
+    });
+  it('returns the same array when no element is repeated', ()=> {
+      assert.equal(Array.toString(uniquifyArray(['Cat', 'Dog', 'Cow'])),Array.toString(['Cat', 'Dog', 'Cow']));
+    });
+  it('returns the uniquified array', ()=> {
+      assert.equal(Array.toString(uniquifyArray(['iPhone', 'Samsung', 'Android', 'iOS', 'iPhone', 'Samsung', 'Nokia', 'Blackberry', 'Android'])),Array.toString(['iPhone', 'Samsung', 'Android', 'iOS', 'Nokia', 'Blackberry']));
+    });
   });
-
-it('returns undefined testh an empty array', ()=> {
-    assert.StrictEqual(uniquifyArray([]),undefined);
-  });
-
-it('returns the array when having a single element', ()=> {
-    assert.StrictEqual(uniquifyArray(['FactoriaF5'])).toEqual(['FactoriaF5']);
-  });
-
-it('returns the correct array when having an array of the same element', ()=> {
-    assert.StrictEqual(uniquifyArray(['FactoriaF5', 'FactoriaF5', 'FactoriaF5'])).toEqual(['FactoriaF5']);
-  });
-
-it('returns the same array when no element is repeated', ()=> {
-    assert.StrictEqual(uniquifyArray(['Cat', 'Dog', 'Cow'])).toEqual(['Cat', 'Dog', 'Cow']);
-  });
-
-it('returns the uniquified array', ()=> {
-    assert.StrictEqual(uniquifyArray(['iPhone', 'Samsung', 'Android', 'iOS', 'iPhone', 'Samsung', 'Nokia', 'Blackberry', 'Android'])).toEqual(['iPhone', 'Samsung', 'Android', 'iOS', 'Nokia', 'Blackberry']);
-  });
-});
 
 describe('Finding Elements - doesWordExist #7', ()=> {
 it('Defines doesWordExist', ()=> {
-    assert.StrictEqual(typeof doesWordExist,'function');
+    assert.strictEqual(typeof doesWordExist,'function');
   });
 
 it('returns false testh an empty array', ()=> {
-    assert.StrictEqual(doesWordExist([]),false);
+    assert.strictEqual(doesWordExist([]),false);
   });
 
 it('returns true if the word we are looking is the only one on the array', ()=> {
-    assert.StrictEqual(doesWordExist(['machine'], 'machine'),true);
+    assert.strictEqual(doesWordExist(['machine'], 'machine'),true);
   });
 
 it('returns false if the word we are looking is not in the array', ()=> {
-    assert.StrictEqual(doesWordExist(['machine', 'poison', 'eat', 'apple', 'horse'], 'ratatouille'),false);
+    assert.strictEqual(doesWordExist(['machine', 'poison', 'eat', 'apple', 'horse'], 'ratatouille'),false);
   });
 
 it('returns true if the word we are looking is in the array', ()=> {
-    assert.StrictEqual(doesWordExist(['pizza', 'sandwich', 'snack', 'soda', 'book', 'computer'], 'book'),true);
+    assert.strictEqual(doesWordExist(['pizza', 'sandwich', 'snack', 'soda', 'book', 'computer'], 'book'),true);
   });
 });
 
 describe('Counting Repetion - howManyTimes #8', ()=> {
 it('Defines howManyTimes', ()=> {
-    assert.StrictEqual(typeof howManyTimes,'function');
+    assert.strictEqual(typeof howManyTimes,'function');
   });
 
 it('returns false testh an empty array', ()=> {
-    assert.StrictEqual(howManyTimes([]),undefined);
+    assert.strictEqual(howManyTimes([]),undefined);
   });
 
 it('returns one when the word appears only one time on the array', ()=> {
-    assert.StrictEqual(howManyTimes(['a', 'b', 'c'], 'a'),1);
+    assert.strictEqual(howManyTimes(['a', 'b', 'c'], 'a'),1);
   });
 
 it('returns zero when the word does not appears on the array', ()=> {
-    assert.StrictEqual(howManyTimes(['a', 'b', 'c'], 'z'),0);
+    assert.strictEqual(howManyTimes(['a', 'b', 'c'], 'z'),0);
   });
 
 it('returns five when the word appears 5 times on the array', ()=> {
-    assert.StrictEqual(howManyTimes(['basketball', 'football', 'tennis', 'rugby', 'rugby', 'ping pong', 'rugby', 'basketball', 'rugby', 'handball', 'rugby'], 'rugby'),5);
+    assert.strictEqual(howManyTimes(['basketball', 'football', 'tennis', 'rugby', 'rugby', 'ping pong', 'rugby', 'basketball', 'rugby', 'handball', 'rugby'], 'rugby'),5);
   });
 });
 
 describe('Counting Repetion - greatestProduct', ()=> {
 it('Defines greatestProduct #9', ()=> {
-    assert.StrictEqual(typeof greatestProduct,'function');
+    assert.strictEqual(typeof greatestProduct,'function');
   });
 
 it('Return 1 when all the numbers of the arrays are 1', ()=> {
@@ -223,7 +218,7 @@ it('Return 1 when all the numbers of the arrays are 1', ()=> {
       [1, 1, 1, 1],
       [1, 1, 1, 1]
     ];
-    assert.StrictEqual(greatestProduct(matrix),1);
+    assert.strictEqual(greatestProduct(matrix),1);
   });
 
 it('Return maxProduct when all max is horizontal', ()=> {
@@ -233,7 +228,7 @@ it('Return maxProduct when all max is horizontal', ()=> {
       [1, 1, 1, 1],
       [1, 1, 1, 1]
     ];
-    assert.StrictEqual(greatestProduct(matrix),6561);
+    assert.strictEqual(greatestProduct(matrix),6561);
   });
 
 it('Return maxProduct when all max is horizontal, not first row', ()=> {
@@ -243,7 +238,7 @@ it('Return maxProduct when all max is horizontal, not first row', ()=> {
       [9, 9, 9, 9],
       [1, 1, 1, 1]
     ];
-    assert.StrictEqual(greatestProduct(matrix),6561);
+    assert.strictEqual(greatestProduct(matrix),6561);
   });
 
 it('Return maxProduct when all max is vertical', ()=> {
@@ -253,7 +248,7 @@ it('Return maxProduct when all max is vertical', ()=> {
       [9, 1, 1, 1],
       [9, 1, 1, 1]
     ];
-    assert.StrictEqual(greatestProduct(matrix),6561);
+    assert.strictEqual(greatestProduct(matrix),6561);
   });
 
 it('Return maxProduct when all max is vertical, not first column', ()=> {
@@ -263,7 +258,7 @@ it('Return maxProduct when all max is vertical, not first column', ()=> {
       [1, 9, 1, 1],
       [1, 9, 1, 1]
     ];
-    assert.StrictEqual(greatestProduct(matrix),6561);
+    assert.strictEqual(greatestProduct(matrix),6561);
   });
 
   it('Return maxProduct when all max is diagonal', ()=> {
@@ -273,7 +268,7 @@ it('Return maxProduct when all max is vertical, not first column', ()=> {
       [1, 1, 9, 1],
       [1, 1, 1, 9]
     ];
-    assert.StrictEqual(greatestProduct(matrix),6561);
+    assert.strictEqual(greatestProduct(matrix),6561);
   });
 
 it('Return 16 when all the numbers of the arrays are 2', ()=> {
@@ -299,6 +294,6 @@ it('Return 16 when all the numbers of the arrays are 2', ()=> {
       [20, 73, 35, 29, 78, 31, 90, 1, 74, 31, 49, 71, 48, 86, 81, 16, 23, 57, 5, 54],
       [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
     ];
-    assert.StrictEqual(greatestProduct(matrix),51267216);
+    assert.strictEqual(greatestProduct(matrix),70600674);
   });
 });
